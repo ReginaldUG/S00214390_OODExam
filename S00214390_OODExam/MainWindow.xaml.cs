@@ -50,5 +50,19 @@ namespace S00214390_OODExam
                 txtBlck_DisplayDesc.Text = selectedRentItem.Description;
             }
         }
+
+        private void Btn_Add_Click(object sender, RoutedEventArgs e)
+        {
+            //Creating and object for the new window that was added in the Solution Explorer
+            AddNewEntryWindow ImageWindow = new AddNewEntryWindow();
+
+            //Ensures that the window only opens if an Item in the character listbox was selected            
+            
+                ImageWindow.Owner = this;
+
+                //Use ShowDialog to ensure the window is Modal
+                ImageWindow.ShowDialog();
+
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:S00214390_OODExam"
         mc:Ignorable="d"
-        Title="AddNewEntryWindow" Height="450" Width="800">
+        Title="AddNewEntryWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>

@@ -23,5 +23,13 @@ namespace S00214390_OODExam
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //reference to the main window           
+            MainWindow main = this.Owner as MainWindow;
+            //Obeject to store value for selected character that is gotten from the "main" window
+            
+        }
     }
 }
