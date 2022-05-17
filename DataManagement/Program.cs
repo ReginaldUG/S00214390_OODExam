@@ -14,6 +14,7 @@ namespace DataManagement
         {
             RentalData db = new RentalData();
 
+            //Adding data to the table
             using (db)
             {
                 RentalProperty p1 = new RentalProperty()

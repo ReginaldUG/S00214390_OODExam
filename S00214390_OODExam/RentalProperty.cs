@@ -9,6 +9,7 @@ namespace S00214390_OODExam
 {
     public class RentalProperty
     {
+        //Creating the properties
         public int ID { get; set; }
         public string Location { get; set; }
         public RentalType TypeOfRental { get; set; }
@@ -23,7 +24,7 @@ namespace S00214390_OODExam
         public string Description { get; set; }
 
         
-
+        //method to increase the rent
         public void IncreaseRent(decimal percentage)
         {
             decimal increasedamount;
@@ -37,6 +38,7 @@ namespace S00214390_OODExam
         }
     }
     
+    //class to create the table
     public class RentalData: DbContext
     {
         public RentalData() : base("S00214390RentalDatabase") { }
