@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:S00214390_OODExam"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <!--Github repo link = https://github.com/ReginaldUG/S00214390_OODExam.git -->
     <Grid>
         
     </Grid>
+   
 </Window>
