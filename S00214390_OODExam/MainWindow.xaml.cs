@@ -20,23 +20,27 @@ namespace S00214390_OODExam
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<RentalProperty> MyRentList = new List<RentalProperty>();
+        List<RentalProperty> MyRentList;
 
         public MainWindow()
         {
             InitializeComponent();
         }
         RentalData db = new RentalData();
+        //Display data on window load
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var query = from r in db.Rental
                         orderby r.Price ascending
                         select r;
-
-            LstBox_DisplayRent.ItemsSource = query.ToList();
+           
+           
+            MyRentList = query.ToList();
+            LstBox_DisplayRent.ItemsSource = MyRentList;
 
         }
 
+        //Event handler to display the description for the selected rental items
         private void LstBox_DisplayRent_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             RentalProperty selectedRentItem = new RentalProperty();
