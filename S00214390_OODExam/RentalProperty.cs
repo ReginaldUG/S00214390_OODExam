@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace S00214390_OODExam
     {
         public int ID { get; set; }
         public string Location { get; set; }
+        public RentalType TypeOfRental { get; set; }
         public enum RentalType
         {
             House,
@@ -28,6 +30,15 @@ namespace S00214390_OODExam
             Price = Price + increasedamount;
         }
     }
-
     
+    public class RentalData: DbContext
+    {
+        public RentalData() : base("S00214390RentalDatabase") { }
+
+        public DbSet<RentalProperty> Rental { get; set; }
+    }
+
+
+
+
 }
