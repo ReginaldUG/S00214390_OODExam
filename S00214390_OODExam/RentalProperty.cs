@@ -20,5 +20,14 @@ namespace S00214390_OODExam
         public decimal Price { get; set; }
         public string Description { get; set; }
 
+
+        public void IncreaseRent(decimal percentage)
+        {
+            decimal increasedamount;
+            increasedamount = (percentage/100) * Price;
+            Price = Price + increasedamount;
+        }
     }
+
+    
 }
